@@ -1,0 +1,28 @@
+#!/bin/bash
+# EdgeSync AI Agent - Örnek Dağıtım Script'i (Linux .sh)
+#
+# Bu script, ajan tarafından iki argümanla çağrılır:
+# $1 (Birinci argüman): "--test" veya "--reload"
+# $2 (İkinci argüman): Test edilecek modelin yolu (örn: /opt/models/model-xyz.bin)
+
+# Loglama için
+echo "$(date) - DEPLOY SCRIPT CALLED" >> /var/log/edgesync_deploy.log
+echo "Komut: $1" >> /var/log/edgesync_deploy.log
+echo "Dosya Yolu: $2" >> /var/log/edgesync_deploy.log
+echo "" >> /var/log/edgesync_deploy.log
+
+# --- GERÇEK DÜNYA ÖRNEĞİ (Docker) ---
+# if [ "$1" == "--test" ]; then
+#   echo "Test komutu (simülasyon)..."
+#   # (Modeli test et, hata verirse 'exit 1' yap)
+#   exit 0
+# fi
+#
+# if [ "$1" == "--reload" ]; then
+#   echo "Docker servisi yeniden başlatılıyor..."
+#   # (docker-compose -f /opt/my-app/docker-compose.yml up -d --no-deps my-model-api)
+#   exit 0
+# fi
+
+# Başarılı (0) döndür. Hata (0 dışında) döndürürseniz, ajan rollback yapar.
+exit 0

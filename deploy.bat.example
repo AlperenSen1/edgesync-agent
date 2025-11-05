@@ -1,0 +1,27 @@
+@echo off
+rem EdgeSync AI Agent - Örnek Dağıtım Script'i (Windows .bat)
+rem 
+rem Bu script, ajan tarafından iki komutla çağrılır:
+rem 1. --test [dosya_yolu]: Yeni modelin geçerli olup olmadığını test etmek için.
+rem 2. --reload: Test başarılı olduktan sonra servisi yeniden başlatmak için.
+
+echo %TIME% - DEPLOY SCRIPT CALLED >> deploy_log.txt
+echo Komut: %1 >> deploy_log.txt
+echo Dosya Yolu: %2 >> deploy_log.txt
+echo. >> deploy_log.txt
+
+rem --- GERÇEK DÜNYA ÖRNEĞİ (Python/Flask) ---
+rem if "%1" == "--test" (
+rem   echo "Test komutu (simülasyon)..."
+rem   rem (Burada 'python -m compileall %2' gibi bir test komutu çalıştırabilirsiniz)
+rem   exit /b 0
+rem )
+rem 
+rem if "%1" == "--reload" (
+rem   echo "Servis yeniden başlatılıyor (simülasyon)..."
+rem   rem (Burada 'nssm restart my-model-service' gibi bir komut çalıştırabilirsiniz)
+rem   exit /b 0
+rem )
+
+rem Başarılı (0) döndür. Hata (1) döndürürseniz, ajan rollback yapar.
+exit /b 0

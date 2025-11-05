@@ -1,0 +1,5 @@
+{
+  "s3_bucket": "YOUR_S3_BUCKET_NAME_HERE",
+  "s3_key": "path/to/your/model.bin",
+  "deploy_script_path": ".\\deploy.bat"
+}

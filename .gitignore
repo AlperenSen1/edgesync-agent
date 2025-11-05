@@ -1,0 +1,16 @@
+# Bizim yerel (local) test dosyalarımız. ASLA paylaşılmamalı.
+config.json
+deploy.bat
+deploy_log.txt
+active_model_link
+
+# Derlenmiş binary'ler. Bunlar "Release" olarak yüklenir, koda eklenmez.
+*.exe
+*-linux
+*-mac
+
+# İndirilen test modellerinin olduğu klasör.
+models/
+
+# Go'nun geçici derleme dosyaları
+*.test
