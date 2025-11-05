@@ -96,6 +96,8 @@ $env:AWS_DEFAULT_REGION = "us-east-1"
 # PowerShell'i "Yönetici Olarak" (Run as Administrator) çalıştırmanız gerekir.
 .\\edgesync-agent.exe
 
+**Linux and MacOS**
+```
 #LINUX/macOS
 # Anahtarları o terminal oturumu için ayarla
 export AWS_ACCESS_KEY_ID="SIZIN_ACCESS_KEY_ID"
